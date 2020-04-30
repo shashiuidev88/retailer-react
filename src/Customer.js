@@ -118,7 +118,6 @@ class Customer extends Component {
             };
 
             let filteredList = this.state.transactions.filter(trans => selectedMonths.indexOf(trans.month) > -1);
-            console.log(filteredList);
             filteredList.forEach((item) => {
                 if (pointsSummary.customers[item.name] == null) {
                     pointsSummary.customers[item.name] = {
@@ -135,7 +134,6 @@ class Customer extends Component {
                 }
                 customerMap.montlyPoints[month] += item.points;
                 customerMap.total += item.points;
-                console.log(customerMap);
                 pointsSummary.customers[item.name] = customerMap;
             });
 
