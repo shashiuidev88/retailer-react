@@ -32,7 +32,6 @@ class DetailsByMonth extends Component {
               {
                 customers.map((customer, index) => {
                   const customerData = this.props.pointsSummary.customers[customer];
-                  console.log("for mental harika",customer, customerData);
                   return <TableRow key={index + "_pSummary"}>
                     <TableCell component="th" scope="row">{customer}</TableCell>
                     {
